@@ -6,5 +6,10 @@
     ],
     "favoriteCountry":"Australia",
     "population":25690000,
-    "planToVisit":true
+    "planToVisit":true,
+    "favoriteFoods":[
+        "Burger",
+        "Pizza",
+        "Kottu"
+    ]
 }
