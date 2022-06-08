@@ -1,7 +1,7 @@
 {
-    "favColors": ["sky blue", "purple", "white"],
-    "favCountry": "Singapore",
+    "fav_colors": ["sky blue", "purple", "white"],
+    "fav_country": "Singapore",
     "population": 5939047,
-    "willVisit": true,
-    "favFoods": ["seafood", "noodle", "french fries"]
+    "will_visit": true,
+    "fav_foods": ["seafood", "noodle", "french fries"]
 }
