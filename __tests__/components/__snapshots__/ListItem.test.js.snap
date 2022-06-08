@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem: should render correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "padding": 15,
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#A100FF",
+        "fontSize": 20,
+      }
+    }
+  >
+    
+  </Text>
+  <Text
+    style={
+      Object {
+        "fontSize": undefined,
+      }
+    }
+  >
+    
+  </Text>
+</View>
+`;

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input: should render correctly 1`] = `
+<TextInput
+  style={
+    Array [
+      Object {
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "fontSize": 20,
+        "paddingHorizontal": 15,
+        "paddingVertical": 15,
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+  underlineColorAndroid="transparent"
+/>
+`;
