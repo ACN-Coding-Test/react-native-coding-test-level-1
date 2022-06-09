@@ -1,15 +1,7 @@
 {
-    "favorite_colors":[
-        "black",
-        "grey",
-        "blue"
-    ],
-    "favorite_country":"Australia",
-    "population":25690000,
-    "plan_to_Visit":true,
-    "favorite_foods":[
-        "Burger",
-        "Pizza",
-        "Kottu"
-    ]
+  "favorite_colors": ["black", "grey", "blue"],
+  "favorite_country": "Australia",
+  "population": 25690000,
+  "plan_to_Visit": true,
+  "favorite_foods": ["Burger", "Pizza", "Kottu"]
 }

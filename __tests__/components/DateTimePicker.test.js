@@ -1,7 +1,6 @@
-import React from 'react'
-import DateTimePicker from '../../src/components/DateTimePicker'
-import { render, waitFor } from '@testing-library/react-native';
-
+import React from "react";
+import DateTimePicker from "../../src/components/DateTimePicker";
+import { render, waitFor } from "@testing-library/react-native";
 
 const renderPicker = async (props) => {
   const utils = render(<DateTimePicker value={new Date()} {...props} />);
@@ -9,10 +8,9 @@ const renderPicker = async (props) => {
   return utils;
 };
 
-
-describe('DateTimePicker:', () => {
-  it('renders a native Component', async () => {
+describe("DateTimePicker:", () => {
+  it("renders a native Component", async () => {
     const { toJSON } = await renderPicker();
     expect(toJSON()).toMatchSnapshot();
   });
-})
+});

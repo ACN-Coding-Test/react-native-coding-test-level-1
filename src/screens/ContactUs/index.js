@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
-import { View, StyleSheet, Alert } from 'react-native';
+import React, { useState } from "react";
+import { View, StyleSheet, Alert } from "react-native";
 
-import { Button, Input, DateTimePicker, Modal, ListItem } from "../../components";
+import {
+  Button,
+  Input,
+  DateTimePicker,
+  Modal,
+  ListItem,
+} from "../../components";
 import theme from "../../theme";
 import Utils from "../../utils";
 
 function MainScreen() {
-
   const [txtName, setName] = useState("");
   const [txtEmail, setEmail] = useState("");
   const [txtDate, setDate] = useState(new Date());
@@ -14,30 +19,27 @@ function MainScreen() {
 
   const validateForm = () => {
     if (txtName === "" || txtEmail === "" || !txtDate) {
-      throw new Error("Fields cannot be empty")
-    }
-    else if (!Utils.validateLetters(txtName)) {
-      throw new Error("Name must contain letters only")
+      throw new Error("Fields cannot be empty");
+    } else if (!Utils.validateLetters(txtName)) {
+      throw new Error("Name must contain letters only");
     } else if (!Utils.validateEmail(txtEmail)) {
-      throw new Error("Please enter valid email")
+      throw new Error("Please enter valid email");
     }
-    return true
-  }
+    return true;
+  };
 
   const onSubmit = () => {
     try {
       if (validateForm()) {
-        setVisibleModal(true)
+        setVisibleModal(true);
       }
     } catch (error) {
-      Alert.alert(error.message)
+      Alert.alert(error.message);
     }
-
-  }
+  };
 
   return (
     <View style={styles.container}>
-
       <Input
         placeholder={"Your name"}
         inputStyles={styles.inputStyle}
@@ -61,20 +63,22 @@ function MainScreen() {
       <Modal
         isVisible={isVisibleModal}
         setVisibleModal={setVisibleModal}
-        renderItem={(item) => <ListItem title={item.title} subTitle={item.subTitle} />}
+        renderItem={(item) => (
+          <ListItem title={item.title} subTitle={item.subTitle} />
+        )}
         data={[
           {
-            "title": "Name",
-            "subTitle": txtName
+            title: "Name",
+            subTitle: txtName,
           },
           {
-            "title": "Email",
-            "subTitle": txtEmail
+            title: "Email",
+            subTitle: txtEmail,
           },
           {
-            "title": "BirthDay",
-            "subTitle": Utils.formatDate(txtDate)
-          }
+            title: "BirthDay",
+            subTitle: Utils.formatDate(txtDate),
+          },
         ]}
       />
     </View>
@@ -87,9 +91,8 @@ const styles = StyleSheet.create({
     padding: theme.padding.default,
   },
   inputStyle: {
-    marginBottom: theme.padding.default
-  }
+    marginBottom: theme.padding.default,
+  },
 });
-
 
 export default MainScreen;

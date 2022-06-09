@@ -1,25 +1,23 @@
-
-
 function validateEmail(email) {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  return regex.test(email)
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
 }
 function validateLetters(str) {
-  const regex = /^[a-zA-Z]+$/
-  return regex.test(str)
+  const regex = /^[a-zA-Z]+$/;
+  return regex.test(str);
 }
 
 function formatDate(date) {
-  const dateTimeObj = new Date(date)
-  const year = dateTimeObj.getFullYear()
-  const month = dateTimeObj.getMonth()
-  const day = dateTimeObj.getDate()
+  const dateTimeObj = new Date(date);
+  const year = dateTimeObj.getFullYear();
+  const month = dateTimeObj.getMonth();
+  const day = dateTimeObj.getDate();
 
-  return `${year}-${month}-${day}`
+  return `${year}-${month}-${day}`;
 }
 
 function getPokemonIdFromURL(url) {
-  const last = url.split("/")
+  const last = url.split("/");
   if (last[last.length - 1] !== "") {
     return last[last.length - 1];
   } else {
@@ -27,32 +25,31 @@ function getPokemonIdFromURL(url) {
   }
 }
 
-
 async function getLastFetchedIndexFromState(getState) {
   try {
-    const state = await getState()
-    const itemObj = state.item
+    const state = await getState();
+    const itemObj = state.item;
     if (itemObj.lastFetchIndex) {
-      return itemObj.lastFetchIndex
+      return itemObj.lastFetchIndex;
     } else {
-      return 0
+      return 0;
     }
   } catch (error) {
-    return 0
+    return 0;
   }
 }
 
 async function getPokemonItemFromState(getState, key) {
   try {
-    const state = await getState()
-    const itemObj = state.viewedItems
+    const state = await getState();
+    const itemObj = state.viewedItems;
     if (itemObj.viewedItems) {
-      return itemObj.viewedItems[key]
+      return itemObj.viewedItems[key];
     } else {
-      return null
+      return null;
     }
   } catch (error) {
-    return null
+    return null;
   }
 }
 
@@ -62,5 +59,5 @@ export default {
   formatDate: formatDate,
   getPokemonIdFromURL: getPokemonIdFromURL,
   getLastFetchedIndexFromState: getLastFetchedIndexFromState,
-  getPokemonItemFromState: getPokemonItemFromState
-}
+  getPokemonItemFromState: getPokemonItemFromState,
+};

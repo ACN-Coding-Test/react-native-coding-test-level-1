@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types'
-import { StyleSheet, TextInput } from 'react-native';
+import React from "react";
+import PropTypes from "prop-types";
+import { StyleSheet, TextInput } from "react-native";
 
 import theme from "../theme";
 
@@ -17,12 +17,9 @@ function Input(props) {
   );
 }
 
-
-
 Input.propTypes = {
   value: PropTypes.string,
-}
-
+};
 
 const styles = StyleSheet.create({
   inputStyle: {
@@ -31,9 +28,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: theme.padding.default,
     paddingVertical: theme.padding.default,
     fontSize: theme.fontSizes.body,
-    borderRadius: theme.borderRadius.default
+    borderRadius: theme.borderRadius.default,
   },
 });
-
 
 export default Input;

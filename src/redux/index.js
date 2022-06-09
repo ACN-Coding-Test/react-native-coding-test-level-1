@@ -1,17 +1,15 @@
-import { combineReducers, createStore, applyMiddleware } from 'redux'
-import thunk from 'redux-thunk'
-import item from './item/reducer'
-import logger from 'redux-logger'
+import { combineReducers, createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import item from "./item/reducer";
+import logger from "redux-logger";
 // Combine all
 const appReducer = combineReducers({
-    item
-})
+  item,
+});
 
-const middlewares = [
-  thunk
-]
+const middlewares = [thunk];
 
 if (__DEV__) {
-  middlewares.push(logger)
+  middlewares.push(logger);
 }
-export default createStore(appReducer, applyMiddleware(...middlewares))
+export default createStore(appReducer, applyMiddleware(...middlewares));
