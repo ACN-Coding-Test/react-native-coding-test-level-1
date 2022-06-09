@@ -13,7 +13,6 @@ function DateTimePicker(props) {
 
 DateTimePicker.defaultProps = {
   value: (new Date()),
-
 }
 
 DateTimePicker.propTypes = {

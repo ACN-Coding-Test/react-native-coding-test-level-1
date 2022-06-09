@@ -1,26 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, TouchableOpacity, Text } from 'react-native';
 import theme from "../theme";
 
 function ListItem(props) {
-    const { title, subTitle, containerStyle, ...otherProps } = props;
+    const { title, subTitle, onPress, containerStyle, ...otherProps } = props;
     return (
-        <View style={[styles.containerStyle, containerStyle]}>
+        <TouchableOpacity onPress={onPress} style={[styles.containerStyle, containerStyle]}>
             <Text style={styles.titleStyle}>{title}</Text>
             <Text style={styles.subTitleStyle}>{subTitle}</Text>
-        </View>
+        </TouchableOpacity>
     );
 }
 
 ListItem.defaultProps = {
     title: "",
-    subTitle: ""
+    subTitle: "",
+    onPress: undefined
 }
 
 ListItem.propTypes = {
     title: PropTypes.string,
-    subTitle: PropTypes.string
+    subTitle: PropTypes.string,
+    onPress: PropTypes.func
 }
 
 

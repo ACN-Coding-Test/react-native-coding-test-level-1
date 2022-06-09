@@ -17,4 +17,11 @@ describe('Utility function tests', () => {
   it('should return false for invalid email', () => {
     expect(Utils.validateEmail("buwanek33")).toEqual(false)
   })
+  it('should return pokemon Id with forward slash', () => {
+    expect(Utils.getPokemonIdFromURL("https://pokeapi.co/api/v2/pokemon/1/")).toEqual("1")
+  })
+  it('should return pokemon Id', () => {
+    expect(Utils.getPokemonIdFromURL("https://pokeapi.co/api/v2/pokemon/1")).toEqual("1")
+  })
+  
 })
