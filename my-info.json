@@ -1,0 +1,7 @@
+{
+    "fav-colors" : ["White", "Red", "Blue"],
+    "fav-country" : "Japan",
+    "country-pop" : 125800000,
+    "is-visitable" : true,
+    "fav-foods" : ["Nasi Lemak", "Nasi Ayam", "Sushi"]
+}
