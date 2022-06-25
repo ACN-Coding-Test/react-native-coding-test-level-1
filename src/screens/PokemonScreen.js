@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {StyleSheet, Text, View, ImageBackground, TextInput, Button, FlatList, Alert, SafeAreaView } from 'react-native';
+import {StyleSheet, Text, View, Button, FlatList } from 'react-native';
 
 const PokemonScreen  = ({navigation}) => {
 
