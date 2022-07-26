@@ -6,5 +6,10 @@
     ],
     "countryWantToVisit": "Italy",
     "countryPopulation": 60000000,
-    "willVisitAgain": true
+    "willVisitAgain": true,
+    "favouriteFoods": [
+        "Chicken Rice Shop",
+        "Tom Yam",
+        "Fried Rice"
+    ]
 }
