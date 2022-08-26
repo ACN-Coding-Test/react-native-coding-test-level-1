@@ -1,6 +1,7 @@
 {
     "favColor": ["Blue", "Red", "Green"],
-    "country": "Japan",
-    "population": 125648061,
-    "visitWithinFiveYear": true
+    "countryName": "Japan",
+    "countryPopulation": 125648061,
+    "visitWithinFiveYear": true,
+    "favFood": ["Sushi", "KFC", "MCD"]
 }
