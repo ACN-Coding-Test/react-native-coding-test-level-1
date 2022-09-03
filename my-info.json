@@ -1,0 +1,7 @@
+{
+  "favouriteColours": ["red", "green", "blue"],
+  "country": "USA",
+  "population": 332403650,
+  "toVisit": true,
+  "favouriteFoods": ["rice", "noodle", "porridge"]
+}
