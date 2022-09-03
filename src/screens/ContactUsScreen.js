@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import FieldLabel from '../components/fieldLabel';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
+import { globalStyles } from '../utils/style.js';
 
 const ContactUsScreen = () => {
   const navigation = useNavigation();
@@ -155,7 +156,7 @@ const ContactUsScreen = () => {
         />
       </View>
 
-      <View style={styles.marginVertical5}></View>
+      <View style={globalStyles.marginVertical5}></View>
       <View style={styles.userNameFieldContainer}>
         <FieldLabel label={'Email'}></FieldLabel>
         <TextInput
@@ -177,7 +178,7 @@ const ContactUsScreen = () => {
           //   }}
         />
       </View>
-      <View style={styles.marginVertical5}></View>
+      <View style={globalStyles.marginVertical5}></View>
       <View style={styles.birthdayFieldContainer}>
         <FieldLabel label={'Birthday'}></FieldLabel>
         <View style={styles.birthdayViewContainer}>
@@ -217,24 +218,24 @@ const ContactUsScreen = () => {
               <Text style={styles.modalTitleText}>Confirm submission</Text>
             </View>
             <View style={styles.modalContent}>
-              <View style={styles.flexDirection}>
-                <Text style={styles.boldText}>Username: </Text>
+              <View style={globalStyles.flexDirectionRow}>
+                <Text style={globalStyles.boldText}>Username: </Text>
                 <Text>{username}</Text>
               </View>
 
-              <View style={styles.flexDirection}>
-                <Text style={styles.boldText}>Email: </Text>
+              <View style={globalStyles.flexDirectionRow}>
+                <Text style={globalStyles.boldText}>Email: </Text>
                 <Text>{email}</Text>
               </View>
 
-              <View style={styles.flexDirection}>
-                <Text style={styles.boldText}>Birthday: </Text>
+              <View style={globalStyles.flexDirectionRow}>
+                <Text style={globalStyles.boldText}>Birthday: </Text>
                 <Text>
                   {DD}/{MM}/{YYYY}
                 </Text>
               </View>
             </View>
-            <View style={styles.flexDirection}>
+            <View style={globalStyles.flexDirectionRow}>
               <TouchableOpacity
                 style={[styles.cancelButton]}
                 onPress={() => setModalVisible(!modalVisible)}
@@ -270,9 +271,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
-  flexDirection: {
-    flexDirection: 'row'
-  },
   userNameFieldContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -298,9 +296,6 @@ const styles = StyleSheet.create({
     flex: 2,
     justifyContent: 'center',
     alignItems: 'center'
-  },
-  marginVertical5: {
-    marginVertical: 5
   },
   birthdayButtonPickerStyleStyle: {
     flex: 2,
@@ -376,9 +371,6 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center'
   },
-  boldText: {
-    fontWeight: 'bold'
-  }
 });
 
 export default ContactUsScreen;
