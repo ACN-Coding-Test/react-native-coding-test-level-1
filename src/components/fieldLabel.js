@@ -2,8 +2,6 @@ import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 
 const FieldLabel = (props) => {
-  //   console.log(props);
-
   const fieldLabel = props.label;
 
   return <Text style={styles.textLabelStyle}>{fieldLabel}:</Text>;

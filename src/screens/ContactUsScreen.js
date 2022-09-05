@@ -22,25 +22,12 @@ const ContactUsScreen = () => {
   const emailRef = useRef();
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
-
-  //   const [username, setUsername] = useState("asdnernn");
-  //   const [email, setEmail] = useState("asndks@mail.com");
-  //   const [date, setDate] = useState(new Date());
-
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
   const [date, setDate] = useState(null);
   const [DD, setDD] = useState(null);
   const [MM, setMM] = useState(null);
   const [YYYY, setYYYY] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
-
-  useEffect(() => {
-    console.log('useEffect check username', username);
-  }, [username]);
-
-  useEffect(() => {
-    console.log('useEffect check email', email);
-  }, [email]);
 
   useEffect(() => {
     if (date) {
@@ -61,20 +48,12 @@ const ContactUsScreen = () => {
   }, [date]);
 
   function submit() {
-    // console.log(username);
-    // console.log(email);
-    // console.log(date);
     if (validateUsernameInput() && validateEmailInput() && date != null) {
-      console.log('all conditions passed');
       setModalVisible(!modalVisible);
     }
   }
 
   function validateUsernameInput() {
-    // A text field to input user's name
-    // Must not be null
-    // Must contain letters only
-    // Maximum of 50 chars
     if (username === '' || username === null) {
       Alert.alert('Username cannot be empty', 'Enter a valid username', [
         { text: 'OK', onPress: () => usernameRef.current.focus() }
@@ -94,15 +73,6 @@ const ContactUsScreen = () => {
   }
 
   function validateEmailInput() {
-    // A text field to input user's email
-    // Must be a valid email address
-    // console.log("validating email");
-    // if (email == "" || email == null) {
-    //   console.log("null hit");
-    //   emailRef.current.focus();
-    //   return;
-    // }
-
     const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     if (!email.match(emailRegex)) {
       Alert.alert('Invalid email format', 'Enter a valid email', [
@@ -122,7 +92,6 @@ const ContactUsScreen = () => {
   };
 
   const handleConfirm = (date) => {
-    console.log('A date has been picked: ', date);
     setDate(date);
     hideDatePicker();
   };
@@ -147,12 +116,6 @@ const ContactUsScreen = () => {
           onChangeText={(val) => {
             setUsername(val);
           }}
-          //   onBlur={() => {
-          //     validateUsernameInput();
-          //   }}
-          //   onEndEditing={() => {
-          //     validateUsernameInput();
-          //   }}
         />
       </View>
 
@@ -173,9 +136,6 @@ const ContactUsScreen = () => {
           onChangeText={(val) => {
             setEmail(val);
           }}
-          //   onEndEditing={() => {
-          //     validateEmailInput();
-          //   }}
         />
       </View>
       <View style={globalStyles.marginVertical5}></View>
@@ -314,19 +274,6 @@ const styles = StyleSheet.create({
     marginTop: 22
   },
   modalView: {
-    // margin: 20,
-    // backgroundColor: "white",
-    // borderRadius: 20,
-    // padding: 35,
-    // alignItems: "center",
-    // shadowColor: "#000",
-    // shadowOffset: {
-    //   width: 0,
-    //   height: 2
-    // },
-    // shadowOpacity: 0.25,
-    // shadowRadius: 4,
-    // elevation: 5,
     height: 200,
     width: 300,
     backgroundColor: '#fff',
@@ -370,7 +317,7 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '100%',
     justifyContent: 'center'
-  },
+  }
 });
 
 export default ContactUsScreen;

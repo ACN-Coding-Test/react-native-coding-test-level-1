@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, SafeAreaView } from 'react-native';
+import { StyleSheet, View, Button, SafeAreaView } from 'react-native';
 import React from 'react';
 import { globalStyles } from '../utils/style.js';
 
@@ -25,7 +25,7 @@ const MainScreen = () => {
       <View style={globalStyles.marginVertical5}></View>
 
       <View style={styles.contactUsButton}>
-        <Button onPress={proceed} title="View Catalog" color="blue" />
+        <Button onPress={viewCatalog} title="View Catalog" color="blue" />
       </View>
     </SafeAreaView>
   );
