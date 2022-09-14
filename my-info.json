@@ -1,0 +1,10 @@
+{
+	"favColor": [
+		"Blue",
+		"Red",
+		"Yellow"
+	],
+	"countryToVisit": "Canada",
+	"countryPopulation": 38000000,
+	"isVisitingWithinFiveYears": true 
+}
