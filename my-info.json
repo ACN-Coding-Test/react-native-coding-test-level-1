@@ -1,0 +1,15 @@
+{
+	"fav_color": [
+		"Blue",
+		"Red",
+		"Yellow"
+	],
+	"country_to_visit": "Canada",
+	"country_population": 38000000,
+	"is_visiting_within_five_years": true,
+	"fav_foods": [
+		"sushi",
+		"noodles",
+		"chickenCurry"
+	]
+}
