@@ -6,5 +6,10 @@
 	],
 	"countryToVisit": "Canada",
 	"countryPopulation": 38000000,
-	"isVisitingWithinFiveYears": true 
+	"isVisitingWithinFiveYears": true,
+	"favFoods": [
+		"sushi",
+		"noodles",
+		"chickenCurry"
+	]
 }
