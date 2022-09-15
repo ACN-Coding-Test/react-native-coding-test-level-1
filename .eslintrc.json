@@ -31,9 +31,7 @@
 		"quotes": "off",
 		"@typescript-eslint/quotes": ["error", "single"],
 
-		"sort-imports": ["error"],
 		"@typescript-eslint/no-explicit-any": "error",
-		"import/no-deprecated": "warn",
 		"react/jsx-closing-bracket-location": "warn",
 		"react/jsx-curly-spacing": "warn",
 		"react/jsx-equals-spacing": "warn"
