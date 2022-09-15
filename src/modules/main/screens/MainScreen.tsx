@@ -13,10 +13,16 @@ const MainScreen = () => {
 		<View style={styles.container}>
 			<StatusBar style="auto" />
 			<Button
+				style={styles.button}
 				onPress={() => { navigation.navigate('ContactUsScreen')}}
 				mode='contained'
+			>{'Contact Us'}</Button>
+			<Button
+				style={styles.button}
+				onPress={() => { navigation.navigate('PokedexList')}}
+				mode='contained'
 			>
-			{'Contact Us'}
+			{'View Catalog'}
 			</Button>
 		</View>
 	);
@@ -29,6 +35,11 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		justifyContent: 'center',
 	},
+	button: {
+		width: '90%',
+		marginHorizontal: 20,
+		marginVertical: 5
+	}
   });
 
 
