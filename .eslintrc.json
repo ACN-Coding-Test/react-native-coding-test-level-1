@@ -18,7 +18,7 @@
 		"project": "./tsconfig.json"
 	},
 	"plugins": [
-		"react", 
+		"react",
 		"react-hooks",
 		"@typescript-eslint/eslint-plugin",
 		"eslint-plugin-import"
