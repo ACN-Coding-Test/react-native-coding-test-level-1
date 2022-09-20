@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import { Button } from 'react-native-paper';
 import React from 'react';
@@ -10,7 +9,6 @@ const MainScreen = () => {
 
 	return (
 		<View style={styles.container}>
-			<StatusBar style="auto" />
 			<Button
 				testID='contactUs'
 				style={styles.button}

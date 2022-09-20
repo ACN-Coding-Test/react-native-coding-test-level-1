@@ -1,23 +1,44 @@
 import { render, screen, fireEvent } from '@testing-library/react-native';
 import ContactUsScreen from '../screens/ContactUsScreen';
 import { test } from '@jest/globals';
-import { DefaultTheme, Provider } from 'react-native-paper';
 
-test('Contact Us Screen', () => {
-	const allQuestions = ['q1', 'q2'];
-	const mockFn = jest.fn();
-	// jest.mock('../../node_modules/react-native/Libraries/Animated/NativeAnimatedHelper');
+describe('Test: Contact Us Screen', () => {
 
-	// render(<ContactUsScreen />);
+	test('1: disabled button if name and email are empty', () => {
+		render(<ContactUsScreen />);
 
-	const answerInputs = screen.getAllByLabelText('name');
+		const submitButton = screen.getByTestId('submit');
 
-	// fireEvent.changeText(answerInputs[0], 'a1');
-	// fireEvent.changeText(answerInputs[1], 'a2');
-	// fireEvent.press(screen.getByText('Submit'));
+		expect(submitButton.props.accessibilityState).toEqual({ disabled: true})
+	});
 
-	// expect(mockFn).toBeCalledWith({
-	//   '1': { q: 'q1', a: 'a1' },
-	//   '2': { q: 'q2', a: 'a2' },
-	// });
+	test('2: disabled button if name and email invalid', () => {
+
+		render(<ContactUsScreen />);
+
+		const name = screen.getByTestId('name');
+		fireEvent.changeText(name, 'Test');
+
+		const email = screen.getByTestId('email');
+		fireEvent.changeText(email, 'Email');
+
+		const submitButton = screen.getByTestId('submit');
+
+		expect(submitButton.props.accessibilityState).toEqual({ disabled: true})
+	});
+
+	test('3: disabled button if name and email is valid', () => {
+		render(<ContactUsScreen />);
+
+		const name = screen.getByTestId('name');
+		fireEvent.changeText(name, 'Test');
+
+		const email = screen.getByTestId('email');
+		fireEvent.changeText(email, 'Email@gmail.com');
+
+		const submitButton = screen.getByTestId('submit');
+		expect(submitButton.props.accessibilityState).toEqual({ disabled: false})
+	});
+
+
   });

@@ -33,6 +33,7 @@ const ContactUsScreen = () => {
 				error={name && !validName(name)}
 			/>
 			<HelperText
+				testID={'nameError'}
 				style={styles.helperText}
 				type="error"
 				visible={name && !validName(name)}
@@ -40,6 +41,7 @@ const ContactUsScreen = () => {
 			{'Name is invalid!'}
 			</HelperText>
 			<TextInput
+				testID={'email'}
 				label="Email"
 				style={styles.textInput}
 				placeholder="johndope@gmail.com"
@@ -65,6 +67,7 @@ const ContactUsScreen = () => {
 				/>
 			</View>
 			<Button
+				testID='submit'
 				style={styles.button}
 				disabled={!validEmail(email) || !validName(name)}
 				mode="contained"

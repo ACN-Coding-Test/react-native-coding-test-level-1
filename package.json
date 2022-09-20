@@ -64,13 +64,14 @@
 	"jest": {
 		"preset": "react-native",
 		"setupFiles": [
-			"./mock.ts"
+			"./mock.tsx"
 		  ],
 		"setupFilesAfterEnv": [
 			"@testing-library/jest-native/extend-expect"
 		],
 		"transformIgnorePatterns": [
-			"node_modules/(?!@react-native|react-native)"
+			"node_modules/(?!@react-native|react-native)",
+			"expo-status-bar"
 		],
 		"moduleFileExtensions": [
 			"ts",

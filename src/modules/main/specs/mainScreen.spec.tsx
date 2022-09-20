@@ -1,21 +1,26 @@
-import { render, screen, fireEvent } from '@testing-library/react-native';
+import { render, screen } from '@testing-library/react-native';
 import MainScreen from '../screens/MainScreen';
 import { test } from '@jest/globals';
 
-test('form submits two answers', () => {
-	const allQuestions = ['q1', 'q2'];
+test('main screen', () => {
+
 	const mockFn = jest.fn();
+	jest.mock('@react-navigation/native', () => {
+		const actualNav = jest.requireActual('@react-navigation/native');
+		return {
+		  ...actualNav,
+		  useNavigation: () => ({
+			navigate: mockFn,
+		  }),
+		};
+	});
 
 	render(<MainScreen />);
 
-	// const answerInputs = screen.getAllByLabelText('answer input');
+	const contactUs = screen.getByTestId('contactUs');
+	expect(contactUs).toBeDefined();
 
-	// fireEvent.changeText(answerInputs[0], 'a1');
-	// fireEvent.changeText(answerInputs[1], 'a2');
-	// fireEvent.press(screen.getByText('Submit'));
+	const Pokedex = screen.getByTestId('Pokedex');
+	expect(Pokedex).toBeDefined();
 
-	// expect(mockFn).toBeCalledWith({
-	//   '1': { q: 'q1', a: 'a1' },
-	//   '2': { q: 'q2', a: 'a2' },
-	// });
   });
