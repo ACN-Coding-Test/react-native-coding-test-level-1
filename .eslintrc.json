@@ -5,6 +5,7 @@
 		"jest": true
 	},
 	"extends": [
+		"@react-native-community",
 		"eslint:recommended",
 		"plugin:react/recommended",
 		"plugin:react-hooks/recommended",
@@ -20,6 +21,7 @@
 	"plugins": [
 		"react",
 		"react-hooks",
+		"@typescript-eslint",
 		"@typescript-eslint/eslint-plugin",
 		"eslint-plugin-import"
 	],

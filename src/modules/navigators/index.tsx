@@ -2,6 +2,7 @@ import ContactUsScreen from '../form/screens/ContactUsScreen';
 import MainScreen from '../main/screens/MainScreen';
 import PokedexListScreen from '../pokedex/screens/PokedexListScreen';
 import PokedexScreen from '../pokedex/screens/PokedexScreen';
+import { connect } from 'react-redux';
 
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';

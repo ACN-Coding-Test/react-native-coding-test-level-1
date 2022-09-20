@@ -19,11 +19,9 @@ const PokedexScreen = ({ route, navigation }) => {
 	}, [])
 
 	return (
-		<Provider>
-			<View style={styles.viewContainer}>
-				<Title>{data}</Title>
-			</View>
-		</Provider>
+		<View style={styles.viewContainer}>
+			<Title>{data}</Title>
+		</View>
 	);
 }
 

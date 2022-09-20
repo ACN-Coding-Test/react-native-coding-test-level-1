@@ -4,7 +4,6 @@ import { Button } from 'react-native-paper';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
-
 const MainScreen = () => {
 
 	const navigation = useNavigation();
