@@ -5,12 +5,13 @@
 		"jest": true
 	},
 	"extends": [
+		"@react-native-community",
 		"eslint:recommended",
 		"plugin:react/recommended",
 		"plugin:react-hooks/recommended",
 		"plugin:@typescript-eslint/eslint-recommended",
 		"plugin:@typescript-eslint/recommended",
-		"plugin:@typescript-eslint/recommended-requiring-type-checking"
+		// "plugin:@typescript-eslint/recommended-requiring-type-checking"
 	],
 	"overrides": [
 	],
@@ -20,6 +21,7 @@
 	"plugins": [
 		"react",
 		"react-hooks",
+		// "@typescript-eslint",
 		"@typescript-eslint/eslint-plugin",
 		"eslint-plugin-import"
 	],
@@ -34,7 +36,11 @@
 		"@typescript-eslint/no-explicit-any": "error",
 		"react/jsx-closing-bracket-location": "warn",
 		"react/jsx-curly-spacing": "warn",
-		"react/jsx-equals-spacing": "warn"
+		"react/jsx-equals-spacing": "warn",
+
+		"object-curly-spacing": ["error", "always"],
+		"no-multi-spaces": ["error"]
+
 	},
 	"settings": {
 		"react": {

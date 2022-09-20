@@ -21,72 +21,74 @@ const ContactUsScreen = () => {
 	}
 
 	return (
-		<Provider>
-			<View style={styles.viewContainer}>
-				<TextInput
-					label="Name"
-					style={styles.textInput}
-					onChangeText={text => setName(text)}
-					placeholder="John Dope"
-					defaultValue=''
-					value={name}
-					error={name && !validName(name)}
+		<View style={styles.viewContainer}>
+			<TextInput
+				testID='name'
+				label="Name"
+				style={styles.textInput}
+				onChangeText={text => setName(text)}
+				placeholder="John Dope"
+				defaultValue=''
+				value={name}
+				error={name && !validName(name)}
+			/>
+			<HelperText
+				testID={'nameError'}
+				style={styles.helperText}
+				type="error"
+				visible={name && !validName(name)}
+			>
+			{'Name is invalid!'}
+			</HelperText>
+			<TextInput
+				testID={'email'}
+				label="Email"
+				style={styles.textInput}
+				placeholder="johndope@gmail.com"
+				value={email}
+				onChangeText={text => setEmail(text)}
+				error={email && !validEmail(email)}
+			/>
+			<HelperText
+				style={styles.helperText}
+				type="error"
+				visible={email && !validEmail(email)}
+			>
+			{'Email address is invalid!'}
+			</HelperText>
+			<View style={{flexDirection: 'row'}}>
+				<Title style={styles.title}>{'Birthday'}</Title>
+				<DateTimePicker
+					style={styles.datePicker}
+					// title="Birthdate"
+					onChange={(_, date) => { setbirthdate(date) }}
+					maximumDate={new Date()}
+					value={birthdate}
 				/>
-				<HelperText
-					style={styles.helperText}
-					type="error"
-					visible={name && !validName(name)}
-				>
-				{'Name is invalid!'}
-				</HelperText>
-				<TextInput
-					label="Email"
-					style={styles.textInput}
-					placeholder="johndope@gmail.com"
-					value={email}
-					onChangeText={text => setEmail(text)}
-					error={email && !validEmail(email)}
-				/>
-				<HelperText
-					style={styles.helperText}
-					type="error"
-					visible={email && !validEmail(email)}
-				>
-				{'Email address is invalid!'}
-				</HelperText>
-				<View style={{flexDirection: 'row'}}>
-					<Title style={styles.title}>{'Birthday'}</Title>
-					<DateTimePicker
-						style={styles.datePicker}
-						// title="Birthdate"
-						onChange={(_, date) => { setbirthdate(date) }}
-						maximumDate={new Date()}
-						value={birthdate}
-					/>
-				</View>
-				<Button
-					style={styles.button}
-					disabled={!validEmail(email) || !validName(name)}
-					mode="contained"
-					onPress={() => {setVisible(true)}}
-				>
-				{'Submit'}
-				</Button>
-				<Portal>
-					<Dialog visible={visible} onDismiss={() => setVisible(false)}>
-						<Dialog.Title>{'Information'}</Dialog.Title>
-						<Dialog.Content>
-							<Paragraph>{`Name : ${name}`}</Paragraph>
-							<Paragraph>{`Email : ${email}`}</Paragraph>
-							<Paragraph>{`Birthdate : ${birthdate.toDateString()}`}</Paragraph>
-						</Dialog.Content>
-						<Dialog.Actions>
-						<Button onPress={() => setVisible(false)}>{'Done'}</Button>
-						</Dialog.Actions>
-					</Dialog>
-				</Portal>
 			</View>
-		</Provider>
+			<Button
+				testID='submit'
+				style={styles.button}
+				disabled={!validEmail(email) || !validName(name)}
+				mode="contained"
+				onPress={() => {setVisible(true)}}
+			>
+			{'Submit'}
+			</Button>
+			<Portal>
+				<Dialog visible={visible} onDismiss={() => setVisible(false)}>
+					<Dialog.Title>{'Information'}</Dialog.Title>
+					<Dialog.Content>
+						<Paragraph>{`Name : ${name}`}</Paragraph>
+						<Paragraph>{`Email : ${email}`}</Paragraph>
+						<Paragraph>{`Birthdate : ${birthdate.toDateString()}`}</Paragraph>
+					</Dialog.Content>
+					<Dialog.Actions>
+					<Button onPress={() => setVisible(false)}>{'Done'}</Button>
+					</Dialog.Actions>
+				</Dialog>
+			</Portal>
+		</View>
 	);
 }
 

@@ -18,9 +18,9 @@ const LinkingConfiguration = {
 						ContactUsScreen: 'Contact Us',
 					},
 				},
-				PokedexList: {
+				Pokedex: {
 					screens: {
-						PokedexListScreen: 'PokedexList',
+						PokedexListScreen: 'Pokedex',
 					},
 				},
 				Pokedex: {
