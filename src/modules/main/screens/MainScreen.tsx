@@ -12,13 +12,15 @@ const MainScreen = () => {
 		<View style={styles.container}>
 			<StatusBar style="auto" />
 			<Button
+				testID='contactUs'
 				style={styles.button}
 				onPress={() => { navigation.navigate('ContactUsScreen')}}
 				mode='contained'
 			>{'Contact Us'}</Button>
 			<Button
+				testID='Pokedex'
 				style={styles.button}
-				onPress={() => { navigation.navigate('PokedexList')}}
+				onPress={() => { navigation.navigate('Pokedex')}}
 				mode='contained'
 			>
 			{'View Catalog'}

@@ -1,18 +1,19 @@
 import React from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
 import { Button, Card, Divider } from 'react-native-paper';
-import { refreshPokedexListAction } from '../src/pokedexAction';
+import { retrievePokedexListAction } from '../src/pokedexAction';
 import { pokedexListSelector } from '../src/pokedexSelectors';
 import { connect } from 'react-redux';
-import { useAppDispatch } from '../../store/store';
 import { useNavigation } from '@react-navigation/native';
+import { Pokedex } from '../typings';
+import { GlobalState } from '../../store/typings';
 
 interface PokedexStateProps {
-	items: PokedexList[]
+	items: Pokedex[]
 }
 
 interface PokedexDispatchProps {
-	retrievePokedexList: typeof refreshPokedexListAction
+	retrievePokedexList: typeof retrievePokedexListAction
 }
 
 type PokedexProps = PokedexStateProps & PokedexDispatchProps;
@@ -21,24 +22,23 @@ const PokedexListScreen = (props: PokedexProps) => {
 
 	const [ isFetching, setIsFetching ] = React.useState(false)
 	const navigation = useNavigation();
-	const dispatch = useAppDispatch();
 
 	React.useEffect(() => {
-		dispatch(refreshPokedexListAction(false));
+		props.retrievePokedexList({ isRefresh: false})
 	}, [])
 
 	const refreshList = () => {
 		setIsFetching(true);
-		dispatch(refreshPokedexListAction(true));
+		props.retrievePokedexList({ isRefresh: true})
 		setIsFetching(false);
 	}
 
-	const renderItem = ({ item }: { item: PokedexList }) => (
+	const renderItem = ({ item }: { item: Pokedex }) => (
 		<Card style={{ backgroundColor: 'white', margin: 10 }}>
 			<Card.Title title={item.name} />
 			<Divider style={{backgroundColor: 'black'}} />
 			<Card.Actions>
-				<Button onPress={() => {navigation.navigate('Pokedex', { url: item.url})}}>{'View'}</Button>
+				<Button onPress={() => {navigation.navigate('Pokedex', { name: item.name})}}>{'View'}</Button>
 			</Card.Actions>
 		</Card>
 	);
@@ -53,7 +53,7 @@ const PokedexListScreen = (props: PokedexProps) => {
 				onRefresh={refreshList}
 				refreshing={isFetching}
 				onEndReached={() => {
-					dispatch(refreshPokedexListAction(false))
+					props.retrievePokedexList({ isRefresh: false})
 				}}
 			/>
 		</View>
@@ -91,7 +91,7 @@ export default connect<PokedexStateProps, PokedexDispatchProps>(
 		items: pokedexListSelector(state),
 	}),
 	{
-		retrievePokedexList: refreshPokedexListAction
+		retrievePokedexList: retrievePokedexListAction
 	},
 )(PokedexListScreen);
 

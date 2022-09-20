@@ -1,8 +1,11 @@
-import { ActionCreators } from '@react-navigation/native';
 import { createAction } from '@reduxjs/toolkit'
+import { Pokedex, PokedexListConfig, Pokemon } from '../typings';
 
-export const refreshPokedexListAction: ActionCreators = createAction<boolean>('POKEDEX/REFRESH_LIST');
-export const storePokedexListAction: ActionCreators = createAction<PokedexList[]>('POKEDEX/STORE_POKEDEX_LIST');
-export const clearPokedexListAction: ActionCreators = createAction('POKEDEX/CLEAR_LIST');
+export const retrievePokedexListAction = createAction<PokedexListConfig>('POKEDEX/RETRIEVE_LIST');
+export const storePokedexListAction = createAction<Pokedex[]>('POKEDEX/STORE_POKEDEX_LIST');
+
+export const retrievePokemonAction = createAction<string>('POKEDEX/RETRIEVE_POKEMON');
+export const storePokemonDetailsAction = createAction<Pokemon>('POKEDEX/STORE_POKEMON');
+export const clearPokedexListAction = createAction('POKEDEX/CLEAR_LIST');
 
 

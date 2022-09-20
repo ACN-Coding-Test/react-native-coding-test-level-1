@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import pokedex from '../pokedex/src/pokedexReducers';
+import pokedex from '../../pokedex/src/pokedexReducers';
 
 const mainReducer = {
 	pokedex,

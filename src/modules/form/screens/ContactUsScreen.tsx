@@ -23,6 +23,7 @@ const ContactUsScreen = () => {
 	return (
 		<View style={styles.viewContainer}>
 			<TextInput
+				testID='name'
 				label="Name"
 				style={styles.textInput}
 				onChangeText={text => setName(text)}
