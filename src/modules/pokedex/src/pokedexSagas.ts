@@ -1,37 +1,37 @@
 import { all, call, take, put, select } from 'redux-saga/effects'
 import axios from 'axios';
-import { clearPokedexListAction, retrievePokedexListAction, retrievePokemonAction, storePokemonDetailsAction, storePokedexListAction } from './pokedexAction';
-import { pokedexListSelector } from './pokedexSelectors';
-import { PokedexListConfig, Pokemon } from '../typings';
+import { clearPokedexAction, retrievePokedexAction, retrievePokemonAction, storePokemonDetailsAction, storePokedexAction } from './pokedexAction';
+import { PokedexSelector } from './pokedexSelectors';
+import { PokedexConfig, Pokemon } from '../typings';
 
 export default function* pokedexRuntime() {
 	yield all([
-		retrievePokedexList(),
+		retrievePokedex(),
 		retrievePokedexDetail()
 	]);
 }
 
-function* retrievePokedexList() {
+function* retrievePokedex() {
 	while (true) {
 		try {
 
 			// Refresh Action
-			const action = yield take(retrievePokedexListAction.toString());
-			const actionPayload: PokedexListConfig = action.payload;
+			const action = yield take(retrievePokedexAction.toString());
+			const actionPayload: PokedexConfig = action.payload;
 			const isRefresh: boolean = actionPayload.isRefresh;
 
 			if (isRefresh) {
-				yield put(clearPokedexListAction())
+				yield put(clearPokedexAction())
 			}
 
-			const pokedexList: Pokedex[] = yield select(pokedexListSelector);
+			const Pokedex: Pokedex[] = yield select(PokedexSelector);
 
-			const offsetValue = pokedexList.length
+			const offsetValue = Pokedex.length
 
 			// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/unbound-method
 			const response = yield call(axios.get, `https://pokeapi.co/api/v2/pokemon?limit=10&offset=${offsetValue}`);
 			const result: Pokedex[] = response.data.results
-			yield put(storePokedexListAction(result))
+			yield put(storePokedexAction(result))
 
 
 		} catch(err) {

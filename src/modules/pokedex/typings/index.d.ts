@@ -9,7 +9,7 @@ interface PokedexState {
 	pokemonCache: Pokemon[]
 }
 
-interface PokedexListConfig {
+interface PokedexConfig {
 	isRefresh: boolean;
 }
 

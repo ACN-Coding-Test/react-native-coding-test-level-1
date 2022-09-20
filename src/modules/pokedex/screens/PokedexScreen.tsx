@@ -1,8 +1,8 @@
 import React from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
 import { Button, Card, Divider } from 'react-native-paper';
-import { retrievePokedexListAction } from '../src/pokedexAction';
-import { pokedexListSelector } from '../src/pokedexSelectors';
+import { retrievePokedexAction } from '../src/pokedexAction';
+import { PokedexSelector } from '../src/pokedexSelectors';
 import { connect } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
 import { Pokedex } from '../typings';
@@ -13,23 +13,23 @@ interface PokedexStateProps {
 }
 
 interface PokedexDispatchProps {
-	retrievePokedexList: typeof retrievePokedexListAction
+	retrievePokedex: typeof retrievePokedexAction
 }
 
 type PokedexProps = PokedexStateProps & PokedexDispatchProps;
 
-const PokedexListScreen = (props: PokedexProps) => {
+const PokedexScreen = (props: PokedexProps) => {
 
 	const [ isFetching, setIsFetching ] = React.useState(false)
 	const navigation = useNavigation();
 
 	React.useEffect(() => {
-		props.retrievePokedexList({ isRefresh: false})
+		props.retrievePokedex({ isRefresh: false})
 	}, [])
 
 	const refreshList = () => {
 		setIsFetching(true);
-		props.retrievePokedexList({ isRefresh: true})
+		props.retrievePokedex({ isRefresh: true})
 		setIsFetching(false);
 	}
 
@@ -38,7 +38,7 @@ const PokedexListScreen = (props: PokedexProps) => {
 			<Card.Title title={item.name} />
 			<Divider style={{backgroundColor: 'black'}} />
 			<Card.Actions>
-				<Button onPress={() => {navigation.navigate('Pokedex', { name: item.name})}}>{'View'}</Button>
+				<Button onPress={() => {navigation.navigate('Pokemon', { name: item.name})}}>{'View'}</Button>
 			</Card.Actions>
 		</Card>
 	);
@@ -53,7 +53,7 @@ const PokedexListScreen = (props: PokedexProps) => {
 				onRefresh={refreshList}
 				refreshing={isFetching}
 				onEndReached={() => {
-					props.retrievePokedexList({ isRefresh: false})
+					props.retrievePokedex({ isRefresh: false})
 				}}
 			/>
 		</View>
@@ -88,10 +88,10 @@ const styles = StyleSheet.create({
 
 export default connect<PokedexStateProps, PokedexDispatchProps>(
 	(state: GlobalState) => ({
-		items: pokedexListSelector(state),
+		items: PokedexSelector(state),
 	}),
 	{
-		retrievePokedexList: retrievePokedexListAction
+		retrievePokedex: retrievePokedexAction
 	},
-)(PokedexListScreen);
+)(PokedexScreen);
 

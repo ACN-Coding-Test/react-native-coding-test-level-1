@@ -1,4 +1,4 @@
-import { clearPokedexListAction, retrievePokedexListAction, storePokedexListAction, storePokemonDetailsAction } from './pokedexAction';
+import { clearPokedexAction, retrievePokedexAction, storePokedexAction, storePokemonDetailsAction } from './pokedexAction';
 import { createReducer } from '@reduxjs/toolkit'
 import { PokedexState } from '../typings';
 
@@ -12,13 +12,13 @@ const POKEDEX_INITIAL_STATE: PokedexState = {
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 const pokedexReducers = createReducer<PokedexState>(POKEDEX_INITIAL_STATE, (builder) => {
 	builder
-		.addCase(retrievePokedexListAction, (state, action) => { POKEDEX_INITIAL_STATE })
-		.addCase(storePokedexListAction, (state, action) => {
+		.addCase(retrievePokedexAction, (state, action) => { POKEDEX_INITIAL_STATE })
+		.addCase(storePokedexAction, (state, action) => {
 			return Object.assign({}, state, {
 				items: [...state.items, ...action.payload]
 			})
 		})
-		.addCase(clearPokedexListAction, (state, action) => {
+		.addCase(clearPokedexAction, (state, action) => {
 			return Object.assign({}, state, {
 				items: []
 			})

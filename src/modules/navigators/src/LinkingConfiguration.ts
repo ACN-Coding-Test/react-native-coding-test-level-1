@@ -20,12 +20,12 @@ const LinkingConfiguration = {
 				},
 				Pokedex: {
 					screens: {
-						PokedexListScreen: 'Pokedex',
+						PokedexScreen: 'Pokedex',
 					},
 				},
-				Pokedex: {
+				Pokemon: {
 					screens: {
-						PokedexScreen: 'Pokedex',
+						PokemonScreen: 'Pokemon',
 					},
 				},
 			},

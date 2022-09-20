@@ -1,8 +1,7 @@
 import ContactUsScreen from '../../form/screens/ContactUsScreen';
 import MainScreen from '../../main/screens/MainScreen';
-import PokedexListScreen from '../../pokedex/screens/PokedexListScreen';
-import PokedexScreen from '../../pokedex/screens/PokemonScreen';
-import { connect } from 'react-redux';
+import PokedexScreen from '../../pokedex/screens/PokedexScreen';
+import PokemonScreen from '../../pokedex/screens/PokemonScreen';
 
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
@@ -13,7 +12,7 @@ type RootStackParamList = {
 	Home: { foo: string; onBar: () => void } | undefined;
 	ContactUsScreen: undefined;
 	Pokedex: undefined;
-	Pokedex: undefined;
+	Pokemon: undefined;
 };
 
 // const RootStack = createStackNavigator<RootStackParamList>();
@@ -28,8 +27,8 @@ function NavigatorContainer() {
 			<Stack.Navigator>
 				<Stack.Screen name="Home" component={MainScreen} />
 				<Stack.Screen name="ContactUsScreen" component={ContactUsScreen} />
-				<Stack.Screen name="Pokedex" component={PokedexListScreen} />
 				<Stack.Screen name="Pokedex" component={PokedexScreen} />
+				<Stack.Screen name="Pokemon" component={PokemonScreen} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
