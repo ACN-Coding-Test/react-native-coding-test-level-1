@@ -1,8 +1,8 @@
 {
-    "favoriteColors":["red","blue","green"],
-     "country":"USA",
-     "population":12345789,
-     "visitInFiveYeaes":true,
-     "favorite foods":["Manchurian","Chicken","Dal_Rice"]
+    "Favorite_Colors":["red","blue","green"],
+     "Country":"USA",
+     "Population":12345789,
+     "Visit_In_Five_Yeaes":true,
+     "Favorite_Foods":["Manchurian","Chicken","Dal_Rice"]
 
 }
