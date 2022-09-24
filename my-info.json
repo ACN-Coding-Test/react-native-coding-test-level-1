@@ -1,7 +1,7 @@
 {
-    "FavoriteColors" :[ "red", "green", "orange" ],
+    "Favorite_Colors" :[ "red", "green", "orange" ],
  "Country" : "Switzerland",
  "Population": 86 ,
- "VisitingProbability" : true,
- "FavouriteFoods":["pizza","Icecream","FrenchFries"]
+ "Visiting_Probability" : true,
+ "Favourite_Foods":["pizza","Icecream","FrenchFries"]
 }
