@@ -1,7 +1,7 @@
 {
-    "favoriteColors":["sky blue", "lavender","cyan"],
-    "country":"Switzerland",
-    "population": 8738791,
+    "favorite_colors":["sky blue", "lavender","cyan"],
+    "country_name":"Switzerland",
+    "country_population": 8738791,
     "visit":true,
-    "favoriteFood":["fast food","Khmer food","BBQ"]
+    "favorite_foods":["fast food","Khmer food","BBQ"]
 }
