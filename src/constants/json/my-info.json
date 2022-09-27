@@ -1,6 +1,7 @@
 {
-    "colors":["sky blue", "lavender","cyan"],
+    "favoriteColors":["sky blue", "lavender","cyan"],
     "country":"Switzerland",
     "population": 8738791,
-    "visit":true
+    "visit":true,
+    "favoriteFood":["fast food","Khmer food","BBQ"]
 }
