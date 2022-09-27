@@ -28,12 +28,12 @@ export const FormScreen = () => {
   };
 
   const handleOnSubmit = () => {
-    if (_.isEmpty(userName)) {
+    if (_.isEmpty(userName.trim())) {
       alert("Username cannot be empty");
       return;
     }
 
-    if (userName.length > 50) {
+    if (userName.trim().length > 50) {
       alert("Username cannot be longer than 50 character.");
       return;
     }
