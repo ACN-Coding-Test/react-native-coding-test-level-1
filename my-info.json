@@ -1,6 +1,7 @@
 {
-    "favouriteColor": ["black", "navy blue", "white"],
-    "countryToVisit": "Germany",
-    "countryPopulation": 84383629,
-    "toVisitInFiveYears": true
+    "favourite_color": ["black", "navy blue", "white"],
+    "country_to_visit": "Germany",
+    "countr_population": 84383629,
+    "to_visit_in_five_years": true,
+    "favourite_foods": ["potato chips", "ramen", "sushi"]
 }
