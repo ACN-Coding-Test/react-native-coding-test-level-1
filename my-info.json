@@ -1,7 +1,7 @@
 {
-    "favoriteColors": ["blue", "yellow", "pink"],
-    "countryToVisit": "Japan",
-    "countryPopulation": 125800000,
-    "visitWithinFiveYears": true,
-    "favoriteFoods": ["pizza", "sushi", "ramen"]
+    "favorite_colors": ["blue", "yellow", "pink"],
+    "country_to_visit": "Japan",
+    "country_population": 125800000,
+    "visit_within_five_years": true,
+    "favorite_foods": ["pizza", "sushi", "ramen"]
 }
