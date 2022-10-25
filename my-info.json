@@ -1,7 +1,7 @@
 {
-  "favColor": ["red", "blue", "yellow"],
-  "countryToVisit": "Korea",
+  "fav_color": ["red", "blue", "yellow"],
+  "country_to_visit": "Korea",
   "population": 13290,
-  "visitAgain": true,
-  "favFood": ["chicken", "fried noodle", "brownies"]
+  "visit_again": true,
+  "fav_food": ["chicken", "fried noodle", "brownies"]
 }
