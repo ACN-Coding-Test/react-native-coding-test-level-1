@@ -1,11 +1,11 @@
 [
     {
-        "myFavoriteColors": ["Blue, Black, Red"],
+        "my_favorite_colors": ["Blue, Black, Red"],
         "country": "Japan",
         "population": 125800000,
         "visiting": true
     },
     {
-        "myFavoriteFoods": ["Fried Chicken", "Spaghetti", "Ramen"]
+        "my_favorite_foods": ["Fried Chicken", "Spaghetti", "Ramen"]
     }
 ]
