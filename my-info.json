@@ -2,5 +2,6 @@
   "favColor": ["red", "blue", "yellow"],
   "countryToVisit": "Korea",
   "population": 13290,
-  "visitAgain": true
+  "visitAgain": true,
+  "favFood": ["chicken", "fried noodle", "brownies"]
 }
