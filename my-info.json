@@ -1,7 +1,7 @@
 {
-  "favoriteColors": ["red", "blue", "black"],
-  "wishCountry": "Korea",
-  "populationNum": 50000,
-  "isGoingToVisit": true,
-  "favoriteFoods": ["Buttermilk Chicken", "Chicken Chop", "Lamb Chop"]
+  "favorite_colors": ["red", "blue", "black"],
+  "wish_country": "Korea",
+  "population_num": 50000,
+  "is_going_to_visit": true,
+  "favorite_foods": ["Buttermilk Chicken", "Chicken Chop", "Lamb Chop"]
 }
