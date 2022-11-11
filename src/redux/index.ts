@@ -3,9 +3,11 @@ import {combineReducers} from 'redux';
 import {ThunkAction} from 'redux-thunk';
 
 import ContactReducer from './contactReducer';
+import PokemonReducer from './pokemonReducer';
 
 const reducer = combineReducers({
   contact: ContactReducer,
+  pokemon: PokemonReducer,
 });
 
 // A store is an immutable object tree in Redux. A store is a state container which holds the application's state.

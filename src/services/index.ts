@@ -1,0 +1,3 @@
+const fetchPokemon = () => {};
+
+export {fetchPokemon};

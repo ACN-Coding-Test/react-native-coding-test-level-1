@@ -4,6 +4,12 @@ import {StackNavigationProp} from '@react-navigation/stack';
 export type RootStackParamList = {
   home: undefined;
   contact: undefined;
+  catalog: undefined;
+
+  pokemonList: undefined;
+  pokemonInfo: {
+    url: string;
+  };
 };
 
 export type HomeNavigationProp = StackNavigationProp<
@@ -17,3 +23,15 @@ export type ContactNavigationProp = StackNavigationProp<
   'contact'
 >;
 export type ContactRouteProp = RouteProp<RootStackParamList, 'contact'>;
+
+export type CatalogNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'catalog'
+>;
+export type CatalogRouteProp = RouteProp<RootStackParamList, 'catalog'>;
+
+export type PokemonInfoNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'pokemonInfo'
+>;
+export type PokemonInfoRouteProp = RouteProp<RootStackParamList, 'pokemonInfo'>;
