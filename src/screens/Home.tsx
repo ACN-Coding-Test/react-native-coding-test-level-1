@@ -1,6 +1,6 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
-import {Subheading, Title} from 'react-native-paper';
+import {View, Image, StyleSheet} from 'react-native';
+import {Subheading} from 'react-native-paper';
 import {Button} from '../components';
 import {Container} from '../containers';
 import {HomeNavigationProp} from '../navigation/model';
@@ -23,33 +23,14 @@ const Home = ({navigation}: Props) => {
 
   return (
     <Container backgroundColor="white" statusBarColor="red" title="PokeDex">
-      <View style={{flex: 1, paddingTop: '5%', paddingBottom: '5%'}}>
-        <View style={{marginTop: '10%'}}>
-          <Image
-            source={pokemonLogo}
-            style={{
-              resizeMode: 'contain',
-              height: 200,
-              width: 300,
-              alignSelf: 'center',
-            }}
-          />
+      <View style={styles.container}>
+        <View style={styles.image_container}>
+          <Image source={pokemonLogo} style={styles.image} />
         </View>
 
-        <Subheading
-          style={{
-            color: colors.blue,
-            letterSpacing: 1.5,
-            fontStyle: 'italic',
-            fontWeight: 'bold',
-            fontSize: 25,
-            textAlign: 'center',
-            marginTop: 10,
-          }}>
-          Gotta catch 'em all
-        </Subheading>
+        <Subheading style={styles.text}>Gotta catch 'em all</Subheading>
 
-        <View style={{marginTop: '5%', alignItems: 'center'}}>
+        <View style={styles.button_container}>
           <Button
             label="Navigate Contact"
             backgroundColor={colors.blue}
@@ -66,5 +47,25 @@ const Home = ({navigation}: Props) => {
     </Container>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: '5%',
+    paddingBottom: '5%',
+  },
+  image_container: {marginTop: '10%'},
+  image: {resizeMode: 'contain', height: 200, width: 300, alignSelf: 'center'},
+  text: {
+    color: colors.blue,
+    letterSpacing: 1.5,
+    fontStyle: 'italic',
+    fontWeight: 'bold',
+    fontSize: 25,
+    textAlign: 'center',
+    marginTop: 10,
+  },
+  button_container: {marginTop: '5%', alignItems: 'center'},
+});
 
 export default Home;

@@ -1,5 +1,12 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, Image, FlatList, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  FlatList,
+  TouchableOpacity,
+  StyleSheet,
+} from 'react-native';
 import {
   Button,
   Card,
@@ -50,13 +57,7 @@ const PokemonList = ({navigation}: Props) => {
 
   const renderItem = ({item}: any) => {
     return (
-      <Card
-        style={{
-          width: '90%',
-          alignSelf: 'center',
-          marginTop: '5%',
-          elevation: 5,
-        }}>
+      <Card style={styles.card}>
         <Card.Cover source={{uri: 'https://picsum.photos/700'}} />
         <Card.Title title="Name" subtitle={item.name} />
         <Card.Actions style={{alignSelf: 'flex-end'}}>
@@ -76,19 +77,12 @@ const PokemonList = ({navigation}: Props) => {
       statusBarColor="red"
       title="PokeDex"
       isMain>
-      <View style={{flex: 1}}>
+      <View style={styles.container}>
         <View>
-          <Image
-            source={pokemonLogo}
-            style={{
-              resizeMode: 'contain',
-              height: 75,
-              alignSelf: 'center',
-            }}
-          />
+          <Image source={pokemonLogo} style={styles.image} />
         </View>
 
-        <View style={{marginTop: '5%'}}>
+        <View style={styles.pagination_container}>
           <DataTable>
             <DataTable.Pagination
               page={page}
@@ -96,10 +90,11 @@ const PokemonList = ({navigation}: Props) => {
               onPageChange={page => {
                 setPage(page);
 
-                console.log(page);
-                // if (page === 0) {
-                //   return;
-                // }
+                console.log(page, ' ', offset);
+
+                if (page === 0 && offset === 0) {
+                  return;
+                }
 
                 if (page > offset / 10) {
                   dispatch(addOffset());
@@ -117,12 +112,39 @@ const PokemonList = ({navigation}: Props) => {
           data={list}
           renderItem={renderItem}
           keyExtractor={(item, index) => String(Math.random())}
-          contentContainerStyle={{paddingBottom: '5%'}}
+          contentContainerStyle={styles.padding_container}
           style={{flex: 1}}
         />
       </View>
     </FlatListContainer>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: '5%',
+    paddingBottom: '5%',
+  },
+  image_container: {marginTop: '10%'},
+  image: {
+    resizeMode: 'contain',
+    height: 75,
+    alignSelf: 'center',
+  },
+  pagination_container: {marginTop: '5%'},
+  padding_container: {paddingBottom: '5%'},
+  text: {
+    color: colors.blue,
+    letterSpacing: 1.5,
+    fontStyle: 'italic',
+    fontWeight: 'bold',
+    fontSize: 25,
+    textAlign: 'center',
+    marginTop: 10,
+  },
+  button_container: {marginTop: '5%', alignItems: 'center'},
+  card: {width: '90%', alignSelf: 'center', marginTop: '5%', elevation: 5},
+});
 
 export default PokemonList;

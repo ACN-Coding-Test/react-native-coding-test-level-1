@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
-import {View, TextInput as Input, Image, Alert} from 'react-native';
+import {View, TextInput as Input, Image, Alert, StyleSheet} from 'react-native';
 import {Paragraph, Subheading, Surface, Title} from 'react-native-paper';
 import {Modal} from 'native-base';
 import {Button, DateInput, TextInput} from '../components';
@@ -58,36 +58,13 @@ const Contact = () => {
       statusBarColor="red"
       title="PokeDex"
       isMain>
-      <View
-        style={{
-          paddingTop: '5%',
-          paddingBottom: '5%',
-        }}>
-        <View>
-          <Image
-            source={pokemonLogo}
-            style={{
-              resizeMode: 'contain',
-              height: 200,
-              width: 300,
-              alignSelf: 'center',
-            }}
-          />
+      <View style={styles.container}>
+        <View style={styles.image_container}>
+          <Image source={pokemonLogo} style={styles.image} />
         </View>
-        <Subheading
-          style={{
-            color: colors.blue,
-            letterSpacing: 1.5,
-            fontStyle: 'italic',
-            fontWeight: 'bold',
-            fontSize: 25,
-            textAlign: 'center',
-            marginTop: 10,
-          }}>
-          Gotta catch 'em all
-        </Subheading>
+        <Subheading style={styles.text}>Gotta catch 'em all</Subheading>
 
-        <View style={{marginTop: '5%'}}>
+        <View style={styles.input_container}>
           <TextInput
             value={info.name}
             onChange={onChangeTextInput('name')}
@@ -112,7 +89,7 @@ const Contact = () => {
           <DateInput value={parseDate} onChange={onChangeDate} />
         </View>
 
-        <View style={{marginTop: '5%', alignItems: 'center'}}>
+        <View style={styles.button_container}>
           <Button
             label="Submit"
             backgroundColor={colors.blue}
@@ -122,40 +99,22 @@ const Contact = () => {
 
         <Modal isOpen={open} onClose={() => setOpen(!open)} size={'xl'}>
           <Modal.Content>
-            <View style={{paddingTop: '7.5%', paddingBottom: '7.5%'}}>
-              <View
-                style={{
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                <Image
-                  source={require('../../assets/pokemon-go.png')}
-                  style={{resizeMode: 'contain', height: 150}}
-                />
+            <View style={styles.modal_container}>
+              <View style={styles.info_container}>
+                <Title style={styles.title}>Thank you for your feedback!</Title>
 
                 <View style={{marginTop: '5%'}}>
-                  <Title
-                    style={{
-                      fontSize: 20,
-                      color: colors.blue,
-                      letterSpacing: 1.5,
-                    }}>
-                    Thank you for your feedback!
-                  </Title>
+                  <Subheading style={styles.subheading}>
+                    Name : {info.name}
+                  </Subheading>
 
-                  <View style={{marginTop: 10}}>
-                    <Subheading style={{letterSpacing: 1.5}}>
-                      Name : {info.name}
-                    </Subheading>
+                  <Subheading style={styles.subheading}>
+                    Email : {info.email}
+                  </Subheading>
 
-                    <Subheading style={{letterSpacing: 1.5}}>
-                      Email : {info.email}
-                    </Subheading>
-
-                    <Subheading style={{letterSpacing: 1.5}}>
-                      Birthday : {date}
-                    </Subheading>
-                  </View>
+                  <Subheading style={styles.subheading}>
+                    Birthday : {date}
+                  </Subheading>
                 </View>
               </View>
             </View>
@@ -165,5 +124,30 @@ const Contact = () => {
     </Container>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: '5%',
+    paddingBottom: '5%',
+  },
+  image_container: {marginTop: '10%'},
+  image: {resizeMode: 'contain', height: 200, width: 300, alignSelf: 'center'},
+  text: {
+    color: colors.blue,
+    letterSpacing: 1.5,
+    fontStyle: 'italic',
+    fontWeight: 'bold',
+    fontSize: 25,
+    textAlign: 'center',
+    marginTop: 10,
+  },
+  button_container: {marginTop: '5%', alignItems: 'center'},
+  input_container: {marginTop: '5%'},
+  modal_container: {paddingTop: '7.5%', paddingBottom: '7.5%'},
+  info_container: {alignItems: 'center', justifyContent: 'center'},
+  title: {fontSize: 20, color: colors.blue, letterSpacing: 1.5},
+  subheading: {letterSpacing: 1.5},
+});
 
 export default Contact;

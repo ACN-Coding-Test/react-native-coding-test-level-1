@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {List, Subheading, Surface, Title} from 'react-native-paper';
 import {Divider} from 'native-base';
 import {Container} from '../../containers';
@@ -52,91 +52,51 @@ const PokemonInfo = ({route}: Props) => {
       statusBarColor="red"
       title="PokeDex"
       isMain>
-      <View style={{flex: 1, padding: '5%'}}>
-        <Surface
-          style={{
-            padding: '5%',
-            marginTop: 10,
-            elevation: 5,
-            borderRadius: 5,
-          }}>
-          <Title style={{letterSpacing: 1.5, color: colors.blue}}>
-            BASIC INFO
-          </Title>
+      <View style={styles.container}>
+        <Surface style={styles.info_container}>
+          <Title style={styles.title}>BASIC INFO</Title>
           <Subheading>Name : {name}</Subheading>
           <Subheading>Height : {height}</Subheading>
           <Subheading>Weight : {weight}</Subheading>
           <Subheading>Base Experience : {base_experience}</Subheading>
         </Surface>
 
-        <Surface
-          style={{
-            padding: '5%',
-            marginTop: 10,
-            elevation: 5,
-            borderRadius: 5,
-          }}>
-          <Title style={{letterSpacing: 1.5, color: colors.blue}}>
-            STAT INFO ({stats.length})
+        <Surface style={styles.info_container}>
+          <Title style={styles.title}>
+            BASIC INFO STAT INFO ({stats.length})
           </Title>
           {stats.map((item, index) => (
-            <View style={{}}>
+            <View key={index}>
               <Subheading>Stat Name : {item.stat.name}</Subheading>
               <Subheading>Base Stat : {item.base_stat}</Subheading>
-              <Divider style={{marginBottom: 10, marginTop: 10}} />
             </View>
           ))}
         </Surface>
-
-        <Surface
-          style={{
-            padding: '5%',
-            marginTop: 10,
-            elevation: 5,
-            borderRadius: 5,
-          }}>
-          <Title style={{letterSpacing: 1.5, color: colors.blue}}>
-            TYPES ({types.length})
-          </Title>
+        <Surface style={styles.info_container}>
+          <Title style={styles.title}>TYPES ({types.length})</Title>
 
           {types.map((item, index) => (
-            <View style={{marginTop: 10}}>
+            <View key={index} style={{marginTop: 10}}>
               <Subheading>Name : {item.type.name}</Subheading>
             </View>
           ))}
         </Surface>
 
-        <Surface
-          style={{
-            padding: '5%',
-            marginTop: 10,
-            elevation: 5,
-            borderRadius: 5,
-          }}>
-          <Title style={{letterSpacing: 1.5, color: colors.blue}}>
-            FORMS ({forms.length})
-          </Title>
+        <Surface style={styles.info_container}>
+          <Title style={styles.title}>FORMS ({forms.length})</Title>
 
           {forms.map((item, index) => (
-            <View style={{}}>
+            <View key={index}>
               <Subheading>Name : {item.name}</Subheading>
             </View>
           ))}
         </Surface>
 
-        <Surface
-          style={{
-            padding: '5%',
-            marginTop: 10,
-            elevation: 5,
-            borderRadius: 5,
-          }}>
-          <Title style={{letterSpacing: 1.5, color: colors.blue}}>
-            ABILITIES ({abilities.length})
-          </Title>
+        <Surface style={styles.info_container}>
+          <Title style={styles.title}>ABILITIES ({abilities.length})</Title>
 
           {abilities.map((item, index) => (
-            <View style={{}}>
+            <View key={index}>
               <Subheading>Name : {item.ability.name}</Subheading>
             </View>
           ))}
@@ -145,5 +105,39 @@ const PokemonInfo = ({route}: Props) => {
     </Container>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: '5%',
+    paddingBottom: '5%',
+  },
+  info_container: {
+    padding: '5%',
+    elevation: 5,
+    borderRadius: 5,
+    width: '95%',
+    alignSelf: 'center',
+    marginBottom: 10,
+  },
+  title: {
+    letterSpacing: 1.5,
+    color: colors.blue,
+  },
+
+  pagination_container: {marginTop: '5%'},
+  padding_container: {paddingBottom: '5%'},
+  text: {
+    color: colors.blue,
+    letterSpacing: 1.5,
+    fontStyle: 'italic',
+    fontWeight: 'bold',
+    fontSize: 25,
+    textAlign: 'center',
+    marginTop: 10,
+  },
+  button_container: {marginTop: '5%', alignItems: 'center'},
+  card: {width: '90%', alignSelf: 'center', marginTop: '5%', elevation: 5},
+});
 
 export default PokemonInfo;
