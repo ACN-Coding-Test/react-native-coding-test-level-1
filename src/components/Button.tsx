@@ -10,7 +10,14 @@ type Props = {
 
 const Button = ({label, onPress, backgroundColor}: Props) => {
   return (
-    <Surface style={{width: '90%', elevation: 5, height: 60, borderRadius: 5}}>
+    <Surface
+      style={{
+        width: '90%',
+        elevation: 5,
+        height: 60,
+        borderRadius: 5,
+        marginTop: '5%',
+      }}>
       <TouchableOpacity
         onPress={onPress}
         style={{

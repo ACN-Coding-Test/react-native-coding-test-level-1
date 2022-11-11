@@ -36,16 +36,12 @@ const Container = ({
         backgroundColor="white"
         isMain={isMain}
       />
-      <KeyboardAwareScrollView showsVerticalScrollIndicator={false}>
-        <View
-          style={{
-            flex: 1,
-            paddingTop: '5%',
-            paddingBottom: '5%',
-          }}>
-          {children}
-        </View>
-      </KeyboardAwareScrollView>
+      <View
+        style={{
+          flex: 1,
+        }}>
+        {children}
+      </View>
     </View>
   );
 };

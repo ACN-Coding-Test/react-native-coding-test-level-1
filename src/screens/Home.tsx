@@ -17,6 +17,10 @@ const Home = ({navigation}: Props) => {
     navigation.navigate('contact');
   };
 
+  const navigateCatalog = () => {
+    navigation.navigate('pokemonList');
+  };
+
   return (
     <Container backgroundColor="white" statusBarColor="red" title="PokeDex">
       <View style={{flex: 1, paddingTop: '5%', paddingBottom: '5%'}}>
@@ -45,11 +49,17 @@ const Home = ({navigation}: Props) => {
           Gotta catch 'em all
         </Subheading>
 
-        <View style={{marginTop: '15%', alignItems: 'center'}}>
+        <View style={{marginTop: '5%', alignItems: 'center'}}>
           <Button
             label="Navigate Contact"
             backgroundColor={colors.blue}
             onPress={navigateContact}
+          />
+
+          <Button
+            label="View Catalog"
+            backgroundColor={colors.blue}
+            onPress={navigateCatalog}
           />
         </View>
       </View>
