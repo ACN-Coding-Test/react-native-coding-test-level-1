@@ -2,36 +2,36 @@ import {RouteProp} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 
 export type RootStackParamList = {
-  home: undefined;
-  contact: undefined;
-  catalog: undefined;
+    Home: undefined;
+    Contact: undefined;
+    Catalog: undefined;
 
-  pokemonList: undefined;
-  pokemonInfo: {
-    url: string;
-  };
+    PokemonList: undefined;
+    PokemonInfo: {
+        url: string;
+    };
 };
 
 export type HomeNavigationProp = StackNavigationProp<
-  RootStackParamList,
-  'home'
+    RootStackParamList,
+    'Home'
 >;
-export type HomeRouteProp = RouteProp<RootStackParamList, 'home'>;
+export type HomeRouteProp = RouteProp<RootStackParamList, 'Home'>;
 
 export type ContactNavigationProp = StackNavigationProp<
-  RootStackParamList,
-  'contact'
+    RootStackParamList,
+    'Contact'
 >;
-export type ContactRouteProp = RouteProp<RootStackParamList, 'contact'>;
+export type ContactRouteProp = RouteProp<RootStackParamList, 'Contact'>;
 
 export type CatalogNavigationProp = StackNavigationProp<
-  RootStackParamList,
-  'catalog'
+    RootStackParamList,
+    'Catalog'
 >;
-export type CatalogRouteProp = RouteProp<RootStackParamList, 'catalog'>;
+export type CatalogRouteProp = RouteProp<RootStackParamList, 'Catalog'>;
 
 export type PokemonInfoNavigationProp = StackNavigationProp<
-  RootStackParamList,
-  'pokemonInfo'
+    RootStackParamList,
+    'PokemonInfo'
 >;
-export type PokemonInfoRouteProp = RouteProp<RootStackParamList, 'pokemonInfo'>;
+export type PokemonInfoRouteProp = RouteProp<RootStackParamList, 'PokemonInfo'>;

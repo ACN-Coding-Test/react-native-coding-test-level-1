@@ -6,6 +6,8 @@ import {NativeBaseProvider, Box} from 'native-base';
 
 import Navigator from './src/navigation';
 
+import 'react-native-gesture-handler';
+
 export default function App() {
   return (
     <NavigationContainer>

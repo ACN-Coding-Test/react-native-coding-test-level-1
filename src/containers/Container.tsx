@@ -7,47 +7,50 @@ const width = Dimensions.get('screen').width;
 const height = Dimensions.get('screen').width;
 
 type Props = {
-  backgroundColor: string;
-  children: React.ReactNode;
-  title: string;
-  statusBarColor: string;
-  isMain?: boolean;
+    backgroundColor: string;
+    children: React.ReactNode;
+    title: string;
+    statusBarColor: string;
+    isMain?: boolean;
 };
 
 const Container = ({
-  children,
-  backgroundColor,
-  title,
-  statusBarColor,
-  isMain,
+    children,
+    backgroundColor,
+    title,
+    statusBarColor,
+    isMain
 }: Props) => {
-  return (
-    <View
-      style={{
-        flex: 1,
-        width,
-        height,
-        backgroundColor: backgroundColor,
-      }}>
-      <StatusBar backgroundColor={backgroundColor} barStyle="light-content" />
-      <Header
-        title={title}
-        statusBarColor="red"
-        backgroundColor="white"
-        isMain={isMain}
-      />
-      <KeyboardAwareScrollView showsVerticalScrollIndicator={false}>
+    return (
         <View
-          style={{
-            flex: 1,
-            paddingTop: '5%',
-            paddingBottom: '5%',
-          }}>
-          {children}
+            style={{
+                flex: 1,
+                width,
+                height,
+                backgroundColor: backgroundColor
+            }}>
+            <StatusBar
+                backgroundColor={backgroundColor}
+                barStyle="light-content"
+            />
+            <Header
+                title={title}
+                statusBarColor="red"
+                backgroundColor="white"
+                isMain={isMain}
+            />
+            <KeyboardAwareScrollView showsVerticalScrollIndicator={false}>
+                <View
+                    style={{
+                        flex: 1,
+                        paddingTop: '5%',
+                        paddingBottom: '5%'
+                    }}>
+                    {children}
+                </View>
+            </KeyboardAwareScrollView>
         </View>
-      </KeyboardAwareScrollView>
-    </View>
-  );
+    );
 };
 
 export default Container;
