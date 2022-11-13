@@ -1,0 +1,330 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing custom input Should render TextInput 1`] = `
+<View
+  style={
+    [
+      {
+        "alignSelf": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "marginBottom": "5%",
+        "width": "90%",
+      },
+    ]
+  }
+>
+  <View
+    style={{}}
+  >
+    <View
+      pointerEvents="none"
+      style={
+        [
+          {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 6,
+          },
+          {
+            "backgroundColor": "white",
+            "borderColor": "rgba(0, 0, 0, 0.54)",
+            "borderRadius": 4,
+            "borderWidth": 1,
+          },
+        ]
+      }
+      testID="text-input-outline"
+    />
+    <View>
+      <View
+        style={
+          [
+            {
+              "paddingBottom": 0,
+            },
+            {
+              "minHeight": 55,
+              "paddingTop": 8,
+            },
+          ]
+        }
+      >
+        <View
+          collapsable={false}
+          pointerEvents="none"
+          style={
+            {
+              "bottom": 0,
+              "left": 0,
+              "opacity": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "transform": [
+                {
+                  "translateX": 3,
+                },
+              ],
+              "zIndex": 3,
+            }
+          }
+        >
+          <View
+            collapsable={false}
+            pointerEvents="none"
+            style={
+              {
+                "backgroundColor": "white",
+                "bottom": 4,
+                "left": 10,
+                "maxHeight": 2,
+                "opacity": 1,
+                "position": "absolute",
+                "right": 0,
+                "top": 6,
+                "transform": [
+                  {
+                    "translateX": -3,
+                  },
+                ],
+                "width": 12,
+              }
+            }
+          />
+          <Text
+            collapsable={false}
+            maxFontSizeMultiplier={1.5}
+            numberOfLines={1}
+            style={
+              {
+                "backgroundColor": "white",
+                "color": "transparent",
+                "fontFamily": "System",
+                "fontSize": 16,
+                "fontWeight": undefined,
+                "left": 18,
+                "maxWidth": -28,
+                "opacity": 1,
+                "paddingHorizontal": 0,
+                "position": "absolute",
+                "textAlign": "left",
+                "top": 36,
+                "transform": [
+                  {
+                    "translateX": 0,
+                  },
+                  {
+                    "translateY": -29,
+                  },
+                  {
+                    "scale": 0.75,
+                  },
+                  {
+                    "scaleY": 0.2,
+                  },
+                ],
+                "writingDirection": "ltr",
+              }
+            }
+          >
+            Name
+          </Text>
+          <Text
+            collapsable={false}
+            maxFontSizeMultiplier={1.5}
+            numberOfLines={1}
+            onLayout={[Function]}
+            style={
+              {
+                "color": "red",
+                "fontFamily": "System",
+                "fontSize": 16,
+                "fontWeight": undefined,
+                "left": 0,
+                "opacity": 0,
+                "paddingHorizontal": 14,
+                "position": "absolute",
+                "textAlign": "left",
+                "top": 35,
+                "transform": [
+                  {
+                    "translateX": 0,
+                  },
+                  {
+                    "translateY": -29,
+                  },
+                  {
+                    "scale": 0.75,
+                  },
+                ],
+                "writingDirection": "ltr",
+              }
+            }
+          >
+            Name
+          </Text>
+          <Text
+            collapsable={false}
+            maxFontSizeMultiplier={1.5}
+            numberOfLines={1}
+            style={
+              {
+                "color": "rgba(0, 0, 0, 0.54)",
+                "fontFamily": "System",
+                "fontSize": 16,
+                "fontWeight": undefined,
+                "left": 0,
+                "opacity": 0,
+                "paddingHorizontal": 14,
+                "position": "absolute",
+                "textAlign": "left",
+                "top": 35,
+                "transform": [
+                  {
+                    "translateX": 0,
+                  },
+                  {
+                    "translateY": -29,
+                  },
+                  {
+                    "scale": 0.75,
+                  },
+                ],
+                "writingDirection": "ltr",
+              }
+            }
+          >
+            Name
+          </Text>
+        </View>
+        <TextInput
+          accessibilityLabel="Name"
+          editable={true}
+          keyboardType="default"
+          maxFontSizeMultiplier={1.5}
+          maxLength={50}
+          multiline={false}
+          numberOfLines={1}
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          onFocus={[Function]}
+          placeholder=" "
+          placeholderTextColor="rgba(0, 0, 0, 0.54)"
+          selectionColor="#39559D"
+          style={
+            [
+              {
+                "flexGrow": 1,
+                "margin": 0,
+                "paddingHorizontal": 14,
+                "zIndex": 1,
+              },
+              {
+                "height": 55,
+              },
+              {
+                "paddingBottom": 19.5,
+                "paddingTop": 19.5,
+              },
+              {
+                "color": "black",
+                "fontFamily": "System",
+                "fontSize": 16,
+                "fontVariant": undefined,
+                "fontWeight": undefined,
+                "textAlign": "left",
+                "textAlignVertical": "center",
+              },
+              false,
+              {
+                "marginRight": 0,
+                "paddingRight": 44,
+              },
+            ]
+          }
+          testID="Name"
+          underlineColorAndroid="transparent"
+          value="janie"
+        />
+      </View>
+      <View
+        collapsable={false}
+        onLayout={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "justifyContent": "center",
+            "opacity": 1,
+            "position": "absolute",
+            "right": 12,
+            "top": 30.5,
+          }
+        }
+      >
+        <Text
+          maxFontSizeMultiplier={1.5}
+          style={
+            [
+              {
+                "color": "rgba(0, 0, 0, 0.54)",
+              },
+              {
+                "fontFamily": "System",
+                "fontSize": 16,
+                "fontWeight": undefined,
+              },
+              undefined,
+            ]
+          }
+        >
+          5/50
+        </Text>
+      </View>
+    </View>
+  </View>
+  <Text
+    style={
+      [
+        {
+          "color": "#000000",
+          "fontFamily": "System",
+          "fontWeight": "400",
+        },
+        {
+          "textAlign": "left",
+        },
+        [
+          {
+            "textAlign": "left",
+          },
+          {
+            "color": "rgba(0, 0, 0, 0.87)",
+            "fontFamily": "System",
+            "fontWeight": "400",
+            "writingDirection": "ltr",
+          },
+          [
+            {
+              "fontSize": 16,
+              "letterSpacing": 0.5,
+              "lineHeight": 24,
+              "marginVertical": 2,
+            },
+            {
+              "color": "red",
+              "fontStyle": "italic",
+              "letterSpacing": 1.3,
+              "textAlign": "right",
+            },
+          ],
+        ],
+      ]
+    }
+  >
+    Enter your name correctly.
+  </Text>
+</View>
+`;
