@@ -1,6 +1,7 @@
 {
-  "favoriteColor": ["Blue", "Black", "Beige"],
-  "countryToVisit": "Japan",
+  "favorite_color": ["Blue", "Black", "Beige"],
+  "country_to_visit": "Japan",
   "population": 125.7,
-  "willVisit": true
+  "will_visit": true,
+  "favorite_food": ["Nasi Lemak", "Siakap 3 Rasa", "Ikan masak steam"]
 }
