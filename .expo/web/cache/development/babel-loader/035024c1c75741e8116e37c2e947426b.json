@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default as Fab } from \"./Fab\";","map":{"version":3,"sources":["index.tsx"],"names":["default","Fab"],"mappings":"AAAA,SAASA,OAAO,IAAIC,GAApB","sourcesContent":["export { default as Fab } from './Fab';\nexport type { IFabProps } from './types';\n"]},"metadata":{},"sourceType":"module"}
