@@ -1,3 +1,4 @@
+
 import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -6,10 +7,12 @@ import ListOfPokemon from "./src/screen/ListOfPokemon";
 import HomeScreen from "./src/screen/HomeScreen";
 import PokemonDetail from "./src/components/PokemonDetail";
 
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
+
     <View style={styles.container}>
       <NativeBaseProvider>
         <View style={styles.container}>
@@ -23,6 +26,7 @@ export default function App() {
         </View>
       </NativeBaseProvider>
     </View>
+
   );
 }
 
