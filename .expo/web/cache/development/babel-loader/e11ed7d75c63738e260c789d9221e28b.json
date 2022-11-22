@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { useHover } from \"./useHover.web\";\nexport { usePress } from \"./usePress\";","map":{"version":3,"sources":["index.web.ts"],"names":["useHover","usePress"],"mappings":"AAAA,SAASA,QAAT;AACA,SAASC,QAAT","sourcesContent":["export { useHover } from \"./useHover.web\";\nexport { usePress } from \"./usePress\";\n"]},"metadata":{},"sourceType":"module"}

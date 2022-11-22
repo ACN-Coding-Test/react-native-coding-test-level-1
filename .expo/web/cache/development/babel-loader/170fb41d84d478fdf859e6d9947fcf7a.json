@@ -1,0 +1,1 @@
+{"ast":null,"code":"\nexport var Wrap = {};","map":{"version":3,"sources":["wrap.ts"],"names":["Wrap"],"mappings":";AACA,OAAO,IAAMA,IAAI,GAAG,CAAA,CAAb","sourcesContent":["// Wrap\nexport const Wrap = {};\n"]},"metadata":{},"sourceType":"module"}
