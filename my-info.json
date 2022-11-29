@@ -8,5 +8,10 @@
     "name": "Japan",
     "population": 125700000,
     "willVisitWithinFiveYears": true
-  }
+  },
+  "favoriteFoods": [
+    { "id": "fried_rice", "value": "Fried Rice" },
+    { "id": "chicken_rice", "value": "Chicken Rice" },
+    { "id": "instant_noodle", "value": "Instant Noodle" }
+  ]
 }
