@@ -1,0 +1,12 @@
+{
+  "favoriteColors": [
+    { "id": "royal-blue", "value": "Royal Blue" },
+    { "id": "emerald-green", "value": "Emerald Green" },
+    { "id": "maroon", "value": "Maroon" }
+  ],
+  "countryToVisit": {
+    "name": "Japan",
+    "population": 125549059,
+    "willVisit": true
+  }
+}
