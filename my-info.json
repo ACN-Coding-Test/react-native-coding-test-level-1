@@ -1,15 +1,15 @@
 {
-  "favoriteColors": [
+  "favorite_colors": [
     { "id": "emerald_green", "value": "Emerald Green" },
     { "id": "maroon", "value": "Maroon" },
     { "id": "royal_blue", "value": "Royal Blue" }
   ],
-  "countryToVisit": {
+  "country_to_visit": {
     "name": "Japan",
     "population": 125700000,
-    "willVisitWithinFiveYears": true
+    "will_visit_within_five_years": true
   },
-  "favoriteFoods": [
+  "favorite_foods": [
     { "id": "fried_rice", "value": "Fried Rice" },
     { "id": "chicken_rice", "value": "Chicken Rice" },
     { "id": "instant_noodle", "value": "Instant Noodle" }
