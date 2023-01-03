@@ -6,5 +6,10 @@
     ],
     "country": "Switzerland",
     "population": 8812387,
-    "willVisitIn5Years": true
+    "willVisitIn5Years": true,
+    "favoriteFoods": {
+        "first": "Sashimi",
+        "second": "Beef",
+        "third": "Curry Rice"
+    }
 }
