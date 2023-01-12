@@ -1,7 +1,7 @@
 {
-    "favouriteColor": ["blue", "red", "green"],
-    "countryWishToVisit": "Japan",
-    "countryPopulation": 125700000,
-    "willVisitCountry": true,
-    "favouriteFood": ["apple", "spaghetti", "Rendang"]
+    "favourite_color": ["blue", "red", "green"],
+    "country_wish_to_visit": "Japan",
+    "country_population": 125700000,
+    "will_visit_country": true,
+    "favourite_food": ["apple", "spaghetti", "Rendang"]
 }
