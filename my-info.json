@@ -1,6 +1,7 @@
 {
-    "favColor": ["blue", "red", "green"],
+    "favouriteColor": ["blue", "red", "green"],
     "countryWishToVisit": "Japan",
     "countryPopulation": 125700000,
-    "willVisit": true
+    "willVisitCountry": true,
+    "favouriteFood": ["apple", "spaghetti", "Rendang"]
 }
