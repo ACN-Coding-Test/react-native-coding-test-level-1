@@ -10,6 +10,9 @@ export default function ContactScreen(props) {
             <Button onPress={() => props.navigation.navigate("ContactScreen")}>
                 <Text style={styles.button_text}>{STRINGS.CONTACT_US}</Text>
             </Button>
+            <Button onPress={() => props.navigation.navigate("CatalogScreen")}>
+                <Text style={styles.button_text}>{STRINGS.VIEW_CATALOG}</Text>
+            </Button>
         </View>
     )
 }

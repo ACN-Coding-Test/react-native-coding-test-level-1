@@ -5,3 +5,4 @@ export const TRANSPARENT = "transparent";
 export const PLACEHOLDER = "#95a5a6";
 export const BLACK = "#000000";
 export const TRANSPARENT_BG = "rgba(44, 62, 80,0.5)";
+export const BLUE = "rgba(41, 128, 185,1.0)";
