@@ -1,6 +1,6 @@
 {
     "colors": ["Blue","Green","Red"],
-    "visit_country_name": "Saudi Arabiya",
-    "visit_country_population": 36000000,
-    "visit_country": true
+    "visitCountryName": "Saudi Arabiya",
+    "visitCountryPopulation": 36000000,
+    "visitCountry": true
 }
